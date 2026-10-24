@@ -1,0 +1,989 @@
+
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="ኢትዮ ማዕድ — የኢትዮጵያ ባህላዊ ምግቦች፣ ሞቅ ያለ አቀባበል እና የቡና ሥነ ሥርዓት።">
+  <meta name="theme-color" content="#193C30">
+
+  <title>ኢትዮ ማዕድ | የኢትዮጵያ ባህላዊ ምግብ ቤት</title>
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+
+  <style>
+    body, button, input, select, textarea {
+      font-family: "Noto Sans Ethiopic", sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- SKIP LINK -->
+  <a class="skip-link" href="#main">
+    ወደ ዋና ይዘት ይሂዱ
+  </a>
+
+  <!-- ANNOUNCEMENT -->
+  <div class="announcement">
+    <span>
+      የኢትዮጵያ ጣዕም፣ የቤተሰብ ፍቅር!
+    </span>
+
+    <a href="#reservation">
+      ቦታዎን ያስይዙ ↗
+    </a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+
+      <a href="#top" class="brand" aria-label="ኢትዮ ማዕድ መነሻ">
+        <span class="brand-mark">✳</span>
+
+        <span>
+          ኢትዮ ማዕድ
+          <small>የባህላዊ ምግብ ቤት</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="site-nav" aria-label="ዋና ምናሌ">
+        <a href="#about">ስለ እኛ</a>
+        <a href="#menu">የምግብ ዝርዝር</a>
+        <a href="#gallery">የፎቶ ማዕከል</a>
+        <a href="#reviews">የደንበኞች አስተያየት</a>
+
+        <a href="#reservation" class="mobile-reserve">
+          ቦታ ያስይዙ
+        </a>
+      </nav>
+
+      <div class="header-actions">
+
+        <a href="#reservation" class="button button-small button-outline">
+          ቦታ ያስይዙ ↗
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          aria-label="ምናሌ ክፈት"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-title">
+
+      <div class="hero-grain"></div>
+
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+
+          <p class="eyebrow">
+            <span class="eyebrow-line"></span>
+            እንኳን ወደ ኢትዮ ማዕድ በደህና መጡ!
+          </p>
+
+          <h1 id="hero-title">
+            የኢትዮጵያ ጣዕም።
+            <br>
+            <em>የቤተሰብ ፍቅር።</em>
+          </h1>
+
+          <p class="hero-description">
+            በባህላዊ ጣዕም፣ በሞቅ ያለ አቀባበል
+            እና በፍቅር በተዘጋጁ ምግቦቻችን
+            እናስተናግዳችኋለን።
+            የኢትዮጵያን የምግብ ባህል
+            ከእኛ ጋር ያጣጥሙ።
+          </p>
+
+          <div class="hero-cta">
+
+            <a href="#menu" class="button button-light">
+              የምግብ ዝርዝር ይመልከቱ ↗
+            </a>
+
+            <a href="#about" class="text-link">
+              ስለ እኛ ይወቁ ↗
+            </a>
+
+          </div>
+
+          <div class="hero-proof">
+
+            <div class="avatar-stack">
+              <span>ኢ</span>
+              <span>ት</span>
+              <span>ዮ</span>
+            </div>
+
+            <div>
+              <strong>በፍቅር የተዘጋጀ ማዕድ</strong>
+              <small>ባህላዊ ጣዕም · ሞቅ ያለ አቀባበል</small>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="hero-art">
+
+          <div class="hero-orbit"></div>
+
+          <img
+            src="assets/ዶሮ ወጥ.jpg"
+            alt="የኢትዮጵያ ባህላዊ ምግብ"
+            width="650"
+            height="650"
+          >
+
+          <div class="floating-label">
+            <span>✦</span>
+
+            <div>
+              <strong>እውነተኛ የኢትዮጵያ ጣዕም</strong>
+              <small>በፍቅር የተዘጋጀ</small>
+            </div>
+          </div>
+
+          <span class="hero-stamp">
+            ጣፋጭ ምግብ<br>
+            ደስተኛ ጊዜ<br>
+            ✳
+          </span>
+
+        </div>
+
+      </div>
+
+      <div class="hero-bottom container">
+        <span>01 / 04 — እንኳን ወደ ማዕዳችን በደህና መጡ</span>
+        <span>ወደ ታች ይመልከቱ ↓</span>
+      </div>
+
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="የምግብ ቤቱ ልዩ ባህሪያት">
+      <div>
+        ባህላዊ የኢትዮጵያ ምግብ
+        <b>✳</b>
+        በፍቅር የተዘጋጀ
+        <b>✳</b>
+        ጣፋጭ ምግብ፣ ጥሩ ጊዜ
+        <b>✳</b>
+        ባህላዊ የኢትዮጵያ ምግብ
+        <b>✳</b>
+        በፍቅር የተዘጋጀ
+        <b>✳</b>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about" id="about">
+
+      <div class="container about-grid">
+
+        <div class="about-art">
+
+          <div class="about-art-bg">
+            <img
+              src="assets/የበሬ ጥብስ.jpg"
+              alt="በማዕድ ላይ የቀረበ ባህላዊ ምግብ"
+              loading="lazy"
+              width="560"
+              height="560"
+            >
+          </div>
+
+          <div class="about-note">
+            <span>✳</span>
+            <strong>
+              አብረን እንብላ።
+              <br>
+              አብረን እንደሰት።
+            </strong>
+          </div>
+
+        </div>
+
+        <div class="about-copy">
+
+          <p class="eyebrow eyebrow-dark">
+            <span class="eyebrow-line"></span>
+            ስለ እኛ
+          </p>
+
+          <h2 class="section-title">
+            የኢትዮጵያ ባህል
+            <em>በእያንዳንዱ ማዕድ።</em>
+          </h2>
+
+          <p>
+            ኢትዮ ማዕድ የኢትዮጵያን
+            የበለጸገ የምግብ ባህል
+            ለማስተዋወቅ የተዘጋጀ
+            ባህላዊ ምግብ ቤት ነው።
+          </p>
+
+          <p>
+            ከጣፋጭ ዶሮ ወጥ እስከ ትኩስ ሽሮ፣
+            ከባህላዊ በያይነቱ እስከ የቡና
+            ሥነ ሥርዓት ድረስ እውነተኛውን
+            የኢትዮጵያ ጣዕም እናቀርባለን።
+          </p>
+
+          <div class="values">
+
+            <div>
+              <span>01</span>
+              <strong>ጥራት ያለው ምግብ</strong>
+              <small>
+                በትኩስ ግብዓቶች የተዘጋጀ ጣፋጭ ምግብ።
+              </small>
+            </div>
+
+            <div>
+              <span>02</span>
+              <strong>ሞቅ ያለ አቀባበል</strong>
+              <small>
+                እያንዳንዱን እንግዳ እንደ ቤተሰብ እናስተናግዳለን።
+              </small>
+            </div>
+
+          </div>
+
+          <a href="#reservation" class="button button-dark">
+            እንግዳችን ይሁኑ ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="section menu-section" id="menu">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <p class="eyebrow eyebrow-dark">
+            <span class="eyebrow-line"></span>
+            ከኢትዮ ማዕድ ወጥ ቤት
+            <span class="eyebrow-line"></span>
+          </p>
+
+          <h2 class="section-title">
+            የእኛን <em>ጣፋጭ ምግቦች</em> ያጣጥሙ።
+          </h2>
+
+          <p>
+            በባህላዊ አሰራር እና በፍቅር
+            የተዘጋጁ የኢትዮጵያ ምግቦች።
+          </p>
+
+        </div>
+
+        <!-- MENU FILTERS -->
+        <div class="menu-toolbar">
+
+          <div class="filters" role="group" aria-label="ምግቦችን በምድብ ያጣሩ">
+
+            <button
+              class="filter active"
+              data-filter="all"
+              aria-pressed="true"
+              type="button"
+            >
+              ሁሉም ምግቦች
+            </button>
+
+            <button
+              class="filter"
+              data-filter="starters"
+              aria-pressed="false"
+              type="button"
+            >
+              መክሰስ
+            </button>
+
+            <button
+              class="filter"
+              data-filter="mains"
+              aria-pressed="false"
+              type="button"
+            >
+              ዋና ምግቦች
+            </button>
+
+            <button
+              class="filter"
+              data-filter="desserts"
+              aria-pressed="false"
+              type="button"
+            >
+              የጾም ምግቦች
+            </button>
+
+            <button
+              class="filter"
+              data-filter="drinks"
+              aria-pressed="false"
+              type="button"
+            >
+              መጠጦች
+            </button>
+
+          </div>
+
+          <p
+            id="menu-count"
+            class="menu-count"
+            aria-live="polite"
+          ></p>
+
+        </div>
+
+        <!-- JAVASCRIPT GENERATES MENU CARDS HERE -->
+        <div id="menu-grid" class="menu-grid"></div>
+
+        <div class="menu-footer">
+
+          <span>✳</span>
+
+          <p>
+            ልዩ የምግብ ፍላጎት አለዎት?
+            ቦታ ሲያስይዙ ያሳውቁን።
+          </p>
+
+          <a href="#reservation" class="text-link text-link-dark">
+            ቦታ ያስይዙ ↗
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- QUOTE SECTION -->
+    <section class="quote-band">
+
+      <div class="container">
+
+        <span class="quote-flower">✳</span>
+
+        <p>
+          “ምግብ ከምንወዳቸው ሰዎች ጋር
+          <em>ስንካፈል የበለጠ ይጣፍጣል።</em>”
+        </p>
+
+        <span class="quote-caption">
+          — የኢትዮ ማዕድ እምነት
+        </span>
+
+      </div>
+
+    </section>
+
+    
+<!-- GALLERY SECTION -->
+<section class="section gallery-section" id="gallery">
+
+  <div class="container">
+
+    <div class="gallery-header">
+
+      <div>
+        <p class="eyebrow eyebrow-dark">
+          <span class="eyebrow-line"></span>
+          የፎቶ ማዕከል
+        </p>
+
+        <h2 class="section-title">
+          የኢትዮጵያ <em>ጣፋጭ ማዕድ።</em>
+        </h2>
+      </div>
+
+      <p>
+        የኢትዮጵያን ባህላዊ ምግቦች፣
+        የቡና ባህልን እና የማዕዳችንን
+        ውበት በፎቶ ይመልከቱ።
+      </p>
+
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+
+      <!-- PHOTO 1: DORO WOT -->
+      <button
+        class="gallery-item gallery-large"
+        type="button"
+        data-image="assets/ዶሮ ወጥ.jpg"
+        data-caption="ዶሮ ወጥ — ባህላዊ የኢትዮጵያ ምግብ"
+        aria-label="የዶሮ ወጥ ፎቶ ይመልከቱ"
+      >
+        <img
+          src="assets/ዶሮ ወጥ.jpg"
+          alt="ዶሮ ወጥ ከእንጀራ ጋር"
+          loading="lazy"
+        >
+
+        <span>ፎቶ ይመልከቱ ↗</span>
+      </button>
+
+      <!-- PHOTO 2: BEYAYNETU -->
+      <button
+        class="gallery-item"
+        type="button"
+        data-image="assets/የጾም በያይነቱ.jpg"
+        data-caption="የጾም በያይነቱ — የተለያዩ የጾም ወጦች"
+        aria-label="የበያይነቱ ፎቶ ይመልከቱ"
+      >
+        <img
+          src="assets/የጾም በያይነቱ.jpg"
+          alt="የጾም በያይነቱ"
+          loading="lazy"
+        >
+
+        <span>ፎቶ ይመልከቱ ↗</span>
+      </button>
+
+      <!-- PHOTO 3: KITFO -->
+      <button
+        class="gallery-item"
+        type="button"
+        data-image="assets/ክትፎ.jpg"
+        data-caption="ክትፎ — በባህላዊ ቅመም የተዘጋጀ"
+        aria-label="የክትፎ ፎቶ ይመልከቱ"
+      >
+        <img
+          src="assets/ክትፎ.jpg"
+          alt="ባህላዊ ክትፎ"
+          loading="lazy"
+        >
+
+        <span>ፎቶ ይመልከቱ ↗</span>
+      </button>
+
+      <!-- PHOTO 4: ETHIOPIAN COFFEE -->
+      <button
+        class="gallery-item gallery-wide"
+        type="button"
+        data-image="assets/ባህላዊ ቡና.jpg"
+        data-caption="ባህላዊ ቡና — የኢትዮጵያ የቡና ባህል"
+        aria-label="የባህላዊ ቡና ፎቶ ይመልከቱ"
+      >
+        <img
+          src="assets/ባህላዊ ቡና.jpg"
+          alt="የኢትዮጵያ ባህላዊ ቡና"
+          loading="lazy"
+        >
+
+        <span>ፎቶ ይመልከቱ ↗</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    <!-- REVIEWS SECTION -->
+    <section class="section reviews-section" id="reviews">
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <p class="eyebrow eyebrow-dark">
+            <span class="eyebrow-line"></span>
+            የደንበኞቻችን አስተያየት
+          </p>
+
+          <h2 class="section-title">
+            ጣፋጭ ምግብ፣
+            <em>ደስተኛ ደንበኞች።</em>
+          </h2>
+
+          <p>
+            እነዚህ ለማሳያ የተጻፉ አስተያየቶች ናቸው።
+            ከማሳተምዎ በፊት በእውነተኛ አስተያየቶች ይተኩ።
+          </p>
+
+        </div>
+
+        <div class="review-grid">
+
+          <article class="review">
+
+            <div class="stars" aria-label="አምስት ኮከቦች">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “ምግቡ በጣም ጣፋጭ ነው።
+              አቀባበላቸውም እንደ ቤተሰብ ነው።”
+            </blockquote>
+
+            <div class="review-author">
+              <span>ሳ</span>
+
+              <div>
+                <strong>ሃይለየሱስ
+.</strong>
+                <small>የማሳያ አስተያየት</small>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="review">
+
+            <div class="stars" aria-label="አምስት ኮከቦች">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “እውነተኛ የኢትዮጵያ ጣዕም
+              የሚሰማበት ምርጥ ቦታ ነው።”
+            </blockquote>
+
+            <div class="review-author">
+              <span>ዳ</span>
+
+              <div>
+                <strong>ዳዊት ተ.</strong>
+                <small>የማሳያ አስተያየት</small>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="review">
+
+            <div class="stars" aria-label="አምስት ኮከቦች">
+              ★★★★★
+            </div>
+
+            <blockquote>
+              “ከቤተሰቤ ጋር ጥሩ ጊዜ አሳለፍኩ።
+              አገልግሎቱና አካባቢው ደስ ይላል።”
+            </blockquote>
+
+            <div class="review-author">
+              <span>ሚ</span>
+
+              <div>
+                <strong>ሚካኤል ገ.</strong>
+                <small>የማሳያ አስተያየት</small>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RESERVATION SECTION -->
+    <section class="section reservation-section" id="reservation">
+
+      <div class="container reservation-grid">
+
+        <div class="reservation-copy">
+
+          <p class="eyebrow">
+            <span class="eyebrow-line"></span>
+            ቦታዎ እየጠበቀዎት ነው
+          </p>
+
+          <h2 class="section-title">
+            እንኳን ወደ
+            <em>ማዕዳችን በደህና መጡ።</em>
+          </h2>
+
+          <p>
+            ከቤተሰብዎ፣ ከጓደኞችዎ
+            ወይም ከሚወዷቸው ሰዎች ጋር
+            የማይረሳ ጊዜ ያሳልፉ።
+          </p>
+
+          <div class="reservation-details">
+
+            <div>
+              <span>◷</span>
+
+              <div>
+                <strong>የስራ ሰዓት</strong>
+                <p>
+                  ሰኞ – ሐሙስ · 12:00–21:00
+                  <br>
+                  ዓርብ – እሁድ · 11:00–22:00
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <span>⌁</span>
+
+              <div>
+                <strong>አድራሻችን</strong>
+
+                <p>
+                  አዲስ አበባ፣ ኢትዮጵያ
+                  <br>
+                  <small>
+                    የማሳያ አድራሻ — እውነተኛውን ይጨምሩ
+                  </small>
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <span>✉</span>
+
+              <div>
+                <strong>ያግኙን</strong>
+
+                <p>
+                 haileyesus2024@gmail.com
+                  <br>
+                  <small>
+                    የማሳያ ኢሜይል — እውነተኛውን ይጨምሩ
+                  </small>
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="reservation-disclaimer">
+            ይህ የማሳያ ድረ-ገጽ ነው።
+            የቦታ ማስያዣ መረጃ በዚህ ብራውዘር
+            ብቻ ይቀመጣል።
+            ወደ ምግብ ቤት አይላክም።
+          </p>
+
+        </div>
+
+        <!-- RESERVATION FORM -->
+        <div class="reservation-card">
+
+          <div class="form-heading">
+
+            <span>✳</span>
+
+            <div>
+              <h3>ቦታዎን ያስይዙ</h3>
+              <p>ስለ ጉብኝትዎ ጥቂት መረጃ ይስጡን።</p>
+            </div>
+
+          </div>
+
+          <form id="reservation-form" novalidate>
+
+            <div class="field-row">
+
+              <label>
+                ሙሉ ስም <span>*</span>
+
+                <input
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  placeholder="ሙሉ ስምዎን ያስገቡ"
+                  minlength="2"
+                  maxlength="80"
+                  required
+                >
+              </label>
+
+              <label>
+                ኢሜይል <span>*</span>
+
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </label>
+
+            </div>
+
+            <div class="field-row">
+
+              <label>
+                ስልክ ቁጥር (አማራጭ)
+
+                <input
+                  type="tel"
+                  name="phone"
+                  autocomplete="tel"
+                  placeholder="+251 9..."
+                  maxlength="30"
+                >
+              </label>
+
+              <label>
+                የእንግዶች ብዛት <span>*</span>
+
+                <select name="guests" required>
+                  <option value="">የሰዎች ብዛት ይምረጡ</option>
+                  <option value="1">1 ሰው</option>
+                  <option value="2">2 ሰዎች</option>
+                  <option value="3">3 ሰዎች</option>
+                  <option value="4">4 ሰዎች</option>
+                  <option value="5">5 ሰዎች</option>
+                  <option value="6">6 ሰዎች</option>
+                  <option value="7">7 ሰዎች</option>
+                  <option value="8">8 ሰዎች</option>
+                </select>
+              </label>
+
+            </div>
+
+            <div class="field-row">
+
+              <label>
+                ቀን <span>*</span>
+
+                <input
+                  type="date"
+                  name="date"
+                  id="reservation-date"
+                  required
+                >
+              </label>
+
+              <label>
+                ሰዓት <span>*</span>
+
+                <select name="time" required>
+                  <option value="">ሰዓት ይምረጡ</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                  <option value="21:00">21:00</option>
+                </select>
+              </label>
+
+            </div>
+
+            <label>
+              ልዩ ጥያቄ ወይም ፍላጎት ካለዎት
+
+              <textarea
+                name="notes"
+                rows="3"
+                maxlength="400"
+                placeholder="ልዩ አጋጣሚ፣ የምግብ አለርጂ ወይም ሌላ ጥያቄ..."
+              ></textarea>
+            </label>
+
+            <p
+              class="form-error"
+              id="form-error"
+              role="alert"
+              aria-live="assertive"
+            ></p>
+
+            <button
+              class="button button-dark button-submit"
+              type="submit"
+            >
+              ቦታ ለማስያዝ ይጠይቁ ↗
+            </button>
+
+            <p class="form-small">
+              ይህ ለፖርትፎሊዮ ማሳያ ብቻ ነው።
+              እውነተኛ ቦታ አያስይዝም።
+            </p>
+
+          </form>
+
+          <!-- RESERVATION SUCCESS -->
+          <div
+            class="reservation-success"
+            id="reservation-success"
+            hidden
+            aria-live="polite"
+          >
+
+            <div class="success-icon">✓</div>
+
+            <h3>ጥያቄዎ ተቀምጧል!</h3>
+
+            <p>
+              የማሳያ ቦታ ማስያዣ ጥያቄዎ
+              በዚህ ብራውዘር ተቀምጧል።
+              ወደ ምግብ ቤት አልተላከም።
+            </p>
+
+            <div id="reservation-summary"></div>
+
+            <div class="success-actions">
+
+              <button
+                class="button button-dark"
+                id="new-reservation"
+                type="button"
+              >
+                ሌላ ቦታ ያስይዙ
+              </button>
+
+              <button
+                class="button button-text"
+                id="clear-reservation"
+                type="button"
+              >
+                የተቀመጠውን ጥያቄ ሰርዝ
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div>
+
+          <a href="#top" class="brand brand-footer">
+            <span class="brand-mark">✳</span>
+
+            <span>
+              ኢትዮ ማዕድ
+              <small>የባህላዊ ምግብ ቤት</small>
+            </span>
+          </a>
+
+          <p>
+            የኢትዮጵያ ጣዕም፣
+            የቤተሰብ ፍቅር።
+          </p>
+
+        </div>
+
+        <div class="footer-links">
+
+          <div>
+
+            <strong>ይጎብኙ</strong>
+
+            <a href="#about">ስለ እኛ</a>
+            <a href="#menu">የምግብ ዝርዝር</a>
+            <a href="#gallery">የፎቶ ማዕከል</a>
+
+          </div>
+
+          <div>
+
+            <strong>ያግኙን</strong>
+
+            <a href="#reservation">ቦታ ያስይዙ</a>
+            <a href="#reviews">የደንበኞች አስተያየት</a>
+            <a href="mailto:hello@example.com">ኢሜይል ይላኩ</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <span>
+          © <span id="year">2026</span>
+          ኢትዮ ማዕድ። የማሳያ ፕሮጀክት።
+        </span>
+
+        <span>
+          በፍቅር የተዘጋጀ ✳
+        </span>
+
+        <a href="#top">
+          ወደ ላይ ተመለስ ↑
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- GALLERY DIALOG -->
+  <dialog
+    id="gallery-dialog"
+    class="gallery-dialog"
+    aria-label="የፎቶ ማሳያ"
+  >
+
+    <button
+      type="button"
+      class="dialog-close"
+      id="dialog-close"
+      aria-label="ፎቶውን ዝጋ"
+    >
+      ×
+    </button>
+
+    <img
+      id="dialog-image"
+      src="assets/gallery-1.svg"
+      alt=""
+    >
+
+    <p id="dialog-caption"></p>
+
+  </dialog>
+
+</body>
+</html>

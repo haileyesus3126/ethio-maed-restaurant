@@ -1,0 +1,2057 @@
+
+/* =====================================================
+   ETHIO MA'ED — ኢትዮ ማዕድ
+   Ethiopian Traditional Restaurant Website
+   CSS3 | Responsive | Amharic Typography
+===================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+/* =====================================================
+   1. DESIGN SYSTEM
+===================================================== */
+
+:root {
+  --green: #193c30;
+  --green-2: #254d3c;
+  --green-dark: #10271f;
+
+  --gold: #d6a65d;
+  --gold-light: #f0d29b;
+
+  --cream: #f8f4e9;
+  --paper: #fffdf7;
+
+  --rust: #a84630;
+  --rust-light: #d58c68;
+
+  --ink: #252b25;
+  --muted: #737b70;
+  --line: #e5e4d9;
+
+  --shadow: 0 18px 45px rgba(16, 39, 31, 0.09);
+
+  --font-main: "Noto Sans Ethiopic", "DM Sans", sans-serif;
+
+  --radius: 8px;
+  --transition: 0.25s ease;
+}
+
+/* =====================================================
+   2. RESET & GLOBAL STYLES
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-main);
+  font-size: 14px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.9;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.container {
+  width: min(1180px, calc(100% - 56px));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 105px 0;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -70px;
+  left: 12px;
+  z-index: 1000;
+  padding: 12px 18px;
+  background: white;
+  color: var(--green);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* =====================================================
+   3. ANNOUNCEMENT BAR
+===================================================== */
+
+.announcement {
+  background: var(--gold);
+  color: var(--green-dark);
+
+  min-height: 38px;
+  padding: 7px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: 16px;
+
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.announcement a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* =====================================================
+   4. HEADER & NAVIGATION
+===================================================== */
+
+.site-header {
+  position: relative;
+  z-index: 50;
+
+  background: var(--green-dark);
+  color: white;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.header-inner {
+  min-height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  color: var(--gold);
+  font-size: 38px;
+  line-height: 1;
+}
+
+.brand small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: var(--gold-light);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav > a {
+  color: #e5eee7;
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: color var(--transition);
+}
+
+.nav > a:hover {
+  color: var(--gold);
+}
+
+.mobile-reserve {
+  display: none;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* =====================================================
+   5. BUTTONS
+===================================================== */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  min-height: 51px;
+  padding: 12px 24px;
+
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+
+  transition:
+    background var(--transition),
+    color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-small {
+  min-height: 43px;
+  padding: 10px 18px;
+}
+
+.button-outline {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.button-outline:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--green-dark);
+}
+
+.button-light {
+  background: var(--gold);
+  color: var(--green-dark);
+}
+
+.button-light:hover {
+  background: var(--gold-light);
+  box-shadow: 0 10px 25px rgba(214, 166, 93, 0.25);
+}
+
+.button-dark {
+  background: var(--green);
+  color: white;
+}
+
+.button-dark:hover {
+  background: var(--green-2);
+}
+
+.button-text {
+  background: transparent;
+  border: 1px solid var(--green);
+  color: var(--green);
+}
+
+.text-link {
+  display: inline-block;
+
+  color: var(--cream);
+  border-bottom: 1px solid var(--gold);
+
+  padding-bottom: 6px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  transition: color var(--transition);
+}
+
+.text-link:hover {
+  color: var(--gold);
+}
+
+.text-link-dark {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+/* =====================================================
+   6. MOBILE MENU BUTTON
+===================================================== */
+
+.menu-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+
+  background: transparent;
+  border: none;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  margin: 5px auto;
+
+  background: white;
+
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+/* =====================================================
+   7. HERO SECTION
+===================================================== */
+
+.hero {
+  position: relative;
+
+  overflow: hidden;
+
+  background: var(--green);
+  color: var(--cream);
+}
+
+.hero-grain {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 10% 80%,
+      rgba(96, 132, 83, 0.25),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at 90% 10%,
+      rgba(214, 166, 93, 0.1),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: relative;
+
+  min-height: 650px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  gap: 45px;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+
+  padding: 65px 0 80px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 26px;
+
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.eyebrow-line {
+  width: 25px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: currentColor;
+}
+
+.eyebrow-dark {
+  color: var(--rust);
+}
+
+.hero h1 {
+  max-width: 650px;
+
+  margin-bottom: 28px;
+
+  font-size: clamp(38px, 4.4vw, 64px);
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.hero-description {
+  max-width: 480px;
+
+  color: #d4dfd5;
+
+  font-size: 14px;
+  line-height: 2.1;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 26px;
+
+  margin-top: 34px;
+}
+
+.hero-proof {
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 65px;
+}
+
+.avatar-stack {
+  display: flex;
+  padding-left: 8px;
+}
+
+.avatar-stack span {
+  display: grid;
+  place-items: center;
+
+  width: 37px;
+  height: 37px;
+
+  margin-left: -8px;
+
+  border: 2px solid var(--green);
+  border-radius: 50%;
+
+  background: var(--gold-light);
+  color: var(--green-dark);
+
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.avatar-stack span:nth-child(2) {
+  background: #d58c68;
+}
+
+.avatar-stack span:nth-child(3) {
+  background: #b6c5a0;
+}
+
+.hero-proof strong,
+.hero-proof small {
+  display: block;
+}
+
+.hero-proof strong {
+  font-size: 12px;
+}
+
+.hero-proof small {
+  margin-top: 5px;
+
+  color: #b8c9ba;
+  font-size: 10px;
+}
+
+/* =====================================================
+   8. HERO IMAGE
+===================================================== */
+
+.hero-art {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  min-height: 610px;
+}
+
+.hero-art > img {
+  position: relative;
+  z-index: 2;
+
+  width: min(610px, 110%);
+
+  filter: drop-shadow(0 30px 30px rgba(0, 0, 0, 0.3));
+
+  animation: float 7s ease-in-out infinite;
+}
+
+.hero-orbit {
+  position: absolute;
+
+  width: 560px;
+  height: 560px;
+
+  border: 1px solid rgba(240, 210, 155, 0.2);
+  border-radius: 50%;
+}
+
+.hero-orbit::before {
+  content: "";
+
+  position: absolute;
+  inset: 40px;
+
+  border: 1px dashed rgba(240, 210, 155, 0.2);
+  border-radius: 50%;
+}
+
+.floating-label {
+  position: absolute;
+  z-index: 3;
+
+  right: 0;
+  bottom: 85px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 17px 20px;
+
+  background: var(--paper);
+  color: var(--green);
+
+  box-shadow: var(--shadow);
+}
+
+.floating-label > span {
+  color: var(--rust);
+  font-size: 27px;
+}
+
+.floating-label strong,
+.floating-label small {
+  display: block;
+}
+
+.floating-label strong {
+  font-size: 12px;
+}
+
+.floating-label small {
+  margin-top: 5px;
+
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.hero-stamp {
+  position: absolute;
+  z-index: 3;
+
+  top: 65px;
+  right: 10px;
+
+  color: var(--gold);
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 2;
+
+  text-align: center;
+
+  transform: rotate(12deg);
+}
+
+.hero-bottom {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 24px;
+
+  color: #b7c5b7;
+  font-size: 10px;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+/* =====================================================
+   9. MOVING TEXT / MARQUEE
+===================================================== */
+
+.marquee {
+  overflow: hidden;
+
+  padding: 17px 0;
+
+  background: var(--gold);
+  color: var(--green-dark);
+}
+
+.marquee div {
+  width: max-content;
+  white-space: nowrap;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  animation: marquee 35s linear infinite;
+}
+
+.marquee b {
+  margin: 0 30px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-45%);
+  }
+}
+
+/* =====================================================
+   10. ABOUT SECTION
+===================================================== */
+
+.about {
+  background: var(--cream);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  gap: 90px;
+}
+
+.about-art {
+  position: relative;
+  min-height: 515px;
+}
+
+.about-art-bg {
+  height: 500px;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  background: #e9e4d4;
+}
+
+.about-art-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.about-note {
+  position: absolute;
+
+  bottom: -20px;
+  right: -22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 17px;
+  padding: 25px 29px;
+
+  background: var(--green);
+  color: white;
+}
+
+.about-note span {
+  color: var(--gold);
+  font-size: 39px;
+}
+
+.about-note strong {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.section-title {
+  margin-bottom: 26px;
+
+  font-size: clamp(32px, 3.8vw, 52px);
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.section-title em {
+  color: var(--rust);
+  font-style: normal;
+}
+
+.about-copy > p:not(.eyebrow) {
+  max-width: 480px;
+
+  margin-bottom: 18px;
+
+  color: #657067;
+  font-size: 13px;
+}
+
+.values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 22px;
+
+  margin: 30px 0 35px;
+  padding-top: 25px;
+
+  border-top: 1px solid var(--line);
+}
+
+.values > div {
+  display: grid;
+  gap: 7px;
+}
+
+.values span {
+  color: var(--rust);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.values strong {
+  font-size: 13px;
+}
+
+.values small {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =====================================================
+   11. MENU SECTION
+===================================================== */
+
+.menu-section {
+  background: var(--paper);
+}
+
+.centered {
+  text-align: center;
+}
+
+.centered .eyebrow {
+  justify-content: center;
+}
+
+.section-heading {
+  margin-bottom: 48px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.menu-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.filter {
+  padding: 11px 17px;
+
+  border: 1px solid #d8ded5;
+  border-radius: 4px;
+
+  background: transparent;
+  color: #657168;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  transition: all var(--transition);
+}
+
+.filter:hover,
+.filter.active {
+  background: var(--green);
+  border-color: var(--green);
+  color: white;
+}
+
+.menu-count {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 11px;
+}
+
+/* =====================================================
+   12. FOOD CARDS
+===================================================== */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.dish-card {
+  overflow: hidden;
+
+  background: white;
+  border: 1px solid #eeeae1;
+  border-radius: 6px;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.dish-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.dish-image {
+  position: relative;
+
+  height: 215px;
+
+  overflow: hidden;
+
+  background: #e7e6d7;
+}
+
+.dish-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.dish-card:hover .dish-image img {
+  transform: scale(1.06);
+}
+
+.dish-tag {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+
+  padding: 7px 10px;
+
+  background: var(--gold-light);
+  color: var(--green-dark);
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.dish-info {
+  padding: 20px 18px;
+}
+
+.dish-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 8px;
+}
+
+.dish-title-row h3 {
+  margin-bottom: 10px;
+
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.dish-title-row strong {
+  color: var(--rust);
+
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.dish-info p {
+  min-height: 70px;
+
+  margin-bottom: 14px;
+
+  color: #7c817a;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.dish-category {
+  color: #8b9286;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  margin-top: 40px;
+
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.menu-footer > span {
+  color: var(--rust);
+  font-size: 25px;
+}
+
+.menu-footer p {
+  margin: 0;
+}
+
+/* =====================================================
+   13. QUOTE SECTION
+===================================================== */
+
+.quote-band {
+  padding: 85px 0;
+
+  background: var(--green-2);
+  color: var(--cream);
+
+  text-align: center;
+}
+
+.quote-flower {
+  color: var(--gold);
+  font-size: 35px;
+}
+
+.quote-band p {
+  max-width: 900px;
+
+  margin: 22px auto;
+
+  font-size: clamp(25px, 3.5vw, 43px);
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+.quote-band em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.quote-caption {
+  color: #c1cdbf;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   14. GALLERY
+===================================================== */
+
+.gallery-section {
+  background: var(--cream);
+}
+
+.gallery-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 36px;
+}
+
+.gallery-header > p {
+  max-width: 260px;
+
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-rows: 250px 250px;
+
+  gap: 15px;
+}
+
+.gallery-item {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+
+  background: #e8e6d6;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+.gallery-item span {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+
+  padding: 10px 13px;
+
+  background: var(--paper);
+  color: var(--green);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  opacity: 0;
+  transform: translateY(8px);
+
+  transition: all var(--transition);
+}
+
+.gallery-item:hover span,
+.gallery-item:focus-visible span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-large {
+  grid-row: span 2;
+}
+
+.gallery-wide {
+  grid-column: span 2;
+}
+
+/* =====================================================
+   15. CUSTOMER REVIEWS
+===================================================== */
+
+.reviews-section {
+  background: #ece9dc;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.review {
+  padding: 32px;
+
+  background: var(--paper);
+  border-radius: 6px;
+
+  transition: transform var(--transition);
+}
+
+.review:hover {
+  transform: translateY(-4px);
+}
+
+.stars {
+  color: var(--gold);
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+
+.review blockquote {
+  min-height: 105px;
+
+  margin: 22px 0 30px;
+
+  font-size: 14px;
+  line-height: 2;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.review-author > span {
+  display: grid;
+  place-items: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #d9dfd0;
+  color: var(--green);
+
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.review-author strong,
+.review-author small {
+  display: block;
+}
+
+.review-author strong {
+  font-size: 12px;
+}
+
+.review-author small {
+  margin-top: 4px;
+
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* =====================================================
+   16. RESERVATION SECTION
+===================================================== */
+
+.reservation-section {
+  background: var(--green);
+  color: white;
+}
+
+.reservation-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+
+  gap: 85px;
+  align-items: start;
+}
+
+.reservation-copy {
+  padding-top: 40px;
+}
+
+.reservation-copy .section-title {
+  font-size: clamp(35px, 4vw, 55px);
+}
+
+.reservation-copy .section-title em {
+  color: var(--gold);
+}
+
+.reservation-copy > p:not(.eyebrow) {
+  max-width: 390px;
+
+  color: #c5d0c5;
+  font-size: 13px;
+}
+
+.reservation-details {
+  display: grid;
+  gap: 28px;
+
+  margin-top: 48px;
+}
+
+.reservation-details > div {
+  display: flex;
+  gap: 18px;
+}
+
+.reservation-details > div > span {
+  width: 30px;
+
+  color: var(--gold);
+  font-size: 25px;
+}
+
+.reservation-details strong {
+  font-size: 13px;
+}
+
+.reservation-details p {
+  margin-top: 7px;
+
+  color: #c0cabe;
+  font-size: 12px;
+}
+
+.reservation-details small {
+  color: #9eafa0;
+  font-size: 10px;
+}
+
+.reservation-disclaimer {
+  margin-top: 35px;
+
+  color: #a9b9aa !important;
+  font-size: 11px !important;
+}
+
+/* =====================================================
+   17. RESERVATION FORM
+===================================================== */
+
+.reservation-card {
+  padding: 36px;
+
+  background: var(--paper);
+  color: var(--ink);
+
+  border-radius: 8px;
+
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.12);
+}
+
+.form-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.form-heading > span {
+  color: var(--rust);
+  font-size: 40px;
+}
+
+.form-heading h3 {
+  margin-bottom: 5px;
+
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.form-heading p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 16px;
+}
+
+.reservation-card label {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: #4c564b;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.reservation-card label span {
+  color: var(--rust);
+}
+
+.reservation-card input,
+.reservation-card select,
+.reservation-card textarea {
+  display: block;
+
+  width: 100%;
+  min-height: 46px;
+
+  margin-top: 9px;
+  padding: 12px 13px;
+
+  background: white;
+  color: var(--ink);
+
+  border: 1px solid #dfe2d9;
+  border-radius: 4px;
+
+  font-size: 12px;
+
+  transition: border-color var(--transition);
+}
+
+.reservation-card input:focus,
+.reservation-card select:focus,
+.reservation-card textarea:focus {
+  border-color: var(--gold);
+  outline: 2px solid rgba(214, 166, 93, 0.15);
+}
+
+.reservation-card textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.button-submit {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form-small {
+  margin-top: 15px;
+
+  color: #858e82;
+
+  font-size: 10px;
+  text-align: center;
+}
+
+.form-error {
+  min-height: 1px;
+  margin-bottom: 10px;
+
+  color: #b32f2f;
+  font-size: 12px;
+}
+
+/* =====================================================
+   18. RESERVATION SUCCESS
+===================================================== */
+
+.reservation-success {
+  padding: 45px 10px;
+  text-align: center;
+}
+
+.reservation-success[hidden],
+#reservation-form[hidden] {
+  display: none;
+}
+
+.success-icon {
+  display: grid;
+  place-items: center;
+
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 20px;
+
+  border-radius: 50%;
+
+  background: #dce9d8;
+  color: var(--green);
+
+  font-size: 32px;
+}
+
+.reservation-success h3 {
+  font-size: 26px;
+}
+
+.reservation-success > p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+#reservation-summary {
+  max-width: 350px;
+
+  margin: 24px auto;
+  padding: 18px;
+
+  background: white;
+  text-align: left;
+}
+
+#reservation-summary p {
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+/* =====================================================
+   19. FOOTER
+===================================================== */
+
+.footer {
+  padding: 65px 0 24px;
+
+  background: var(--green-dark);
+  color: #e8eee7;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 45px;
+
+  padding-bottom: 60px;
+}
+
+.brand-footer {
+  font-size: 25px;
+}
+
+.footer-top > div > p {
+  margin-top: 18px;
+
+  color: #a7b6a9;
+  font-size: 12px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 90px;
+}
+
+.footer-links > div {
+  display: grid;
+  align-content: start;
+
+  gap: 14px;
+}
+
+.footer-links strong {
+  margin-bottom: 7px;
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: #a7b6a9;
+  font-size: 12px;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+
+  color: #a3b0a6;
+  font-size: 10px;
+}
+
+/* =====================================================
+   20. GALLERY DIALOG
+===================================================== */
+
+.gallery-dialog {
+  width: min(780px, 92vw);
+  max-height: 90vh;
+
+  padding: 25px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: var(--paper);
+
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-dialog::backdrop {
+  background: rgba(9, 19, 13, 0.85);
+}
+
+.gallery-dialog img {
+  width: 100%;
+  max-height: 65vh;
+
+  object-fit: contain;
+}
+
+.gallery-dialog p {
+  margin-top: 15px;
+
+  text-align: center;
+  font-size: 16px;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: var(--green);
+  color: white;
+
+  font-size: 25px;
+}
+
+/* =====================================================
+   21. RESPONSIVE — TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+  .nav {
+    gap: 15px;
+  }
+
+  .nav > a {
+    font-size: 11px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-grid {
+    gap: 55px;
+  }
+
+  .reservation-grid {
+    gap: 45px;
+  }
+
+  .hero-orbit {
+    width: 450px;
+    height: 450px;
+  }
+
+  .hero-art {
+    min-height: 500px;
+  }
+}
+
+/* =====================================================
+   22. RESPONSIVE — SMALL TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .container {
+    width: min(100% - 38px, 700px);
+  }
+
+  .header-inner {
+    min-height: 75px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+    padding: 22px 24px 30px;
+
+    background: var(--green-2);
+
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav > a {
+    padding: 14px 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+
+    font-size: 13px;
+  }
+
+  .nav .mobile-reserve {
+    display: block;
+    color: var(--gold);
+  }
+
+  .header-actions > .button {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .hero-copy {
+    padding: 75px 0 10px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 7vw, 60px);
+  }
+
+  .hero-proof {
+    margin-top: 35px;
+  }
+
+  .hero-art {
+    min-height: 460px;
+  }
+
+  .hero-art > img {
+    max-width: 490px;
+  }
+
+  .hero-orbit {
+    width: 420px;
+    height: 420px;
+  }
+
+  .floating-label {
+    right: 0;
+    bottom: 40px;
+  }
+
+  .hero-stamp {
+    right: 5px;
+    top: 25px;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .about-grid,
+  .reservation-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .about-art {
+    min-height: 410px;
+  }
+
+  .about-art-bg {
+    height: 410px;
+  }
+
+  .about-note {
+    right: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-grid {
+    grid-template-rows: 200px 200px;
+  }
+
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review blockquote {
+    min-height: 0;
+  }
+
+  .reservation-copy {
+    padding-top: 0;
+  }
+
+  .footer-links {
+    gap: 50px;
+  }
+}
+
+/* =====================================================
+   23. RESPONSIVE — MOBILE
+===================================================== */
+
+@media (max-width: 520px) {
+
+  .announcement {
+    gap: 8px;
+    font-size: 9px;
+  }
+
+  .brand {
+    font-size: 19px;
+  }
+
+  .brand-mark {
+    font-size: 30px;
+  }
+
+  .brand small {
+    font-size: 8px;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+    line-height: 1.6;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .hero-cta {
+    gap: 22px;
+  }
+
+  .hero-art {
+    min-height: 340px;
+  }
+
+  .hero-art > img {
+    max-width: 370px;
+  }
+
+  .hero-orbit {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-stamp {
+    top: 0;
+    font-size: 9px;
+  }
+
+  .floating-label {
+    right: 0;
+    bottom: 10px;
+    padding: 10px;
+  }
+
+  .floating-label strong {
+    font-size: 10px;
+  }
+
+  .floating-label small {
+    font-size: 9px;
+  }
+
+  .hero-bottom {
+    font-size: 8px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-art {
+    min-height: 330px;
+  }
+
+  .about-art-bg {
+    height: 325px;
+  }
+
+  .about-note {
+    padding: 14px;
+  }
+
+  .about-note strong {
+    font-size: 13px;
+  }
+
+  .values {
+    gap: 12px;
+  }
+
+  .menu-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters {
+    gap: 7px;
+  }
+
+  .filter {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+
+  .menu-grid {
+    gap: 12px;
+  }
+
+  .dish-image {
+    height: 145px;
+  }
+
+  .dish-info {
+    padding: 13px;
+  }
+
+  .dish-title-row {
+    display: block;
+  }
+
+  .dish-title-row h3 {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .dish-title-row strong {
+    font-size: 12px;
+  }
+
+  .dish-info p {
+    min-height: 85px;
+    font-size: 10px;
+  }
+
+  .dish-tag {
+    top: 8px;
+    left: 8px;
+    padding: 5px;
+    font-size: 8px;
+  }
+
+  .menu-footer {
+    text-align: center;
+  }
+
+  .gallery-header {
+    display: block;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px 180px 180px;
+  }
+
+  .gallery-large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .gallery-wide {
+    grid-column: span 2;
+  }
+
+  .reservation-card {
+    padding: 23px 17px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer-top {
+    display: block;
+  }
+
+  .footer-links {
+    margin-top: 38px;
+    gap: 55px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+  }
+
+  .quote-band {
+    padding: 55px 0;
+  }
+}
+
+/* =====================================================
+   24. EXTRA SMALL PHONES
+===================================================== */
+
+@media (max-width: 360px) {
+
+  .container {
+    width: calc(100% - 28px);
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-orbit {
+    width: 250px;
+    height: 250px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dish-image {
+    height: 220px;
+  }
+
+  .dish-info p {
+    min-height: 0;
+  }
+
+  .footer-links {
+    gap: 25px;
+  }
+}
+
+/* =====================================================
+   25. ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
